@@ -16,14 +16,22 @@ What exists today:
 | [england9/17games](https://github.com/england9/17games) | Source zips (`flappy-bee.zip`, `coca-cola.zip`) |
 | This agent project | Full lobby + production builds of both games |
 
-To deploy on Cloudflare Pages against GitHub:
+## Cloudflare Workers (Git-connected)
 
-1. Put **this project’s files** on `england9/17games` (replace the zip-only tree), **or** click **Create repo** in Cursor and point Pages at that new GitHub repo.
-2. Cloudflare → Workers & Pages → Create → Connect to Git → select the repo.
-3. Build command: `npm run build` · Output directory: `dist` · Branch: `main`.
-4. Attach `17spades.com` (or a subdomain) as a custom domain.
+This repo deploys as a **static Worker** (`wrangler.jsonc` → `assets.directory = ./dist`).
 
-This agent cannot push to `england9/17games` without GitHub credentials for that account.
+In the Cloudflare dashboard for Worker **17games** → **Settings** → **Builds**:
+
+| Setting | Value |
+| --- | --- |
+| Build command | `npm run build` |
+| Deploy command | `npm run deploy` |
+| Root directory | `/` (repo root) |
+| Production branch | `main` |
+
+`npm run deploy` runs `vite build` then `wrangler deploy`, so `dist/` exists before upload.
+
+Custom domain: Worker → **Settings** → **Domains & Routes** → add `17spades.com` or `games.17spades.com`.
 
 ## Local development
 
