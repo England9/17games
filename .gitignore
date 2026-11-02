@@ -26,3 +26,7 @@ dist-ssr
 # Cloudflare / Wrangler
 .wrangler
 .dev.vars
+
+# Game source build artifacts
+games-src/*/node_modules
+games-src/*/dist

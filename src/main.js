@@ -47,7 +47,7 @@ app.innerHTML = `
         <div class="portal-media bee-media"></div>
         <div class="portal-copy">
           <h2>Flappy Bee</h2>
-          <p>Keep the bee buzzing between flower pipes. One mistimed tap and you are nectar.</p>
+          <p>Tribute flyer for the Ginza Honey Bee Project. Pass pipes, grab honey and flowers.</p>
           <span class="play-chip">Play now</span>
         </div>
       </a>

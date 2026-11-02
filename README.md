@@ -1,11 +1,29 @@
 # 17 Games
 
-A small Cloudflare Pages arcade for [17 Spades](https://17spades.com) with two playable games:
+Cloudflare Pages arcade lobby for 17 Spades with:
 
-- [`/games/flappy-bee`](./public/games/flappy-bee/) — Flappy Bee
-- [`/games/coca-cola`](./public/games/coca-cola/) — Coca-Cola
+- [`/games/flappy-bee`](./public/games/flappy-bee/) — your Flappy Bee build (Ginza Honey Bee Project tribute)
+- [`/games/coca-cola`](./public/games/coca-cola/) — playable placeholder until a real Coca-Cola build is uploaded
 
-Designed to deploy from GitHub (`england9/17games`) to Cloudflare Pages, then map a custom route or domain such as `17spades.com`.
+## Important: GitHub wiring
+
+This Cursor cloud agent is **not** checked out from [england9/17games](https://github.com/england9/17games). It uses a temporary Cursor remote.
+
+What exists today:
+
+| Place | Contents |
+| --- | --- |
+| [england9/17games](https://github.com/england9/17games) | `flappy-bee.zip`, empty `coca-cola.zip`, README |
+| This agent project | Full lobby + built Flappy Bee + Coca-Cola placeholder |
+
+To deploy on Cloudflare Pages against GitHub:
+
+1. Put **this project’s files** on `england9/17games` (replace the zip-only commit), **or** click **Create repo** in Cursor and point Pages at that new GitHub repo.
+2. Cloudflare → Workers & Pages → Create → Connect to Git → select the repo.
+3. Build command: `npm run build` · Output directory: `dist` · Branch: `main`.
+4. Attach `17spades.com` (or a subdomain) as a custom domain.
+
+This agent cannot push to `england9/17games` without GitHub credentials for that account.
 
 ## Local development
 
@@ -16,35 +34,15 @@ npm run dev
 
 Open [http://127.0.0.1:43127](http://127.0.0.1:43127).
 
+## Rebuild Flappy Bee from source
+
+Source lives in `games-src/flappy-bee` (extracted from your GitHub zip, without `node_modules`).
+
 ```bash
+npm run build:flappy-bee
 npm run build
-npm run pages:dev
 ```
 
-## Replace with your game builds
+## Coca-Cola game
 
-Each game is a self-contained folder under `public/games/<name>/`.
-
-To swap in your own files, replace the contents of:
-
-- `public/games/flappy-bee/`
-- `public/games/coca-cola/`
-
-Keep an `index.html` at the root of each folder so these URLs stay stable:
-
-- `/games/flappy-bee/`
-- `/games/coca-cola/`
-
-## Cloudflare Pages setup
-
-1. Push this repo to GitHub (`england9/17games`).
-2. In Cloudflare Dashboard → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
-3. Select `england9/17games`, production branch `main`.
-4. Build settings:
-   - **Framework preset:** Vite
-   - **Build command:** `npm run build`
-   - **Build output directory:** `dist`
-5. After the first deploy, add a custom domain (for example `17spades.com` or `games.17spades.com`).
-6. If the marketing site already owns the apex, add path-based routing or a subdomain and link to `/games/flappy-bee` and `/games/coca-cola`.
-
-`wrangler.jsonc` points Pages at `dist` for local `wrangler pages` commands.
+`coca-cola.zip` on GitHub currently contains only an empty folder. Re-upload a real build (or zip the game folder with `index.html` inside), and it can replace `public/games/coca-cola/`.
