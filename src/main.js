@@ -4,66 +4,63 @@ const app = document.querySelector('#app')
 
 app.innerHTML = `
   <div class="stage">
-    <div class="atmosphere" aria-hidden="true"></div>
-    <div class="sparkle" aria-hidden="true"></div>
+    <div class="sky" aria-hidden="true"></div>
+    <div class="haze" aria-hidden="true"></div>
 
     <header class="topbar">
       <a class="brand" href="/" aria-label="17 Games home">
-        <span class="brand-mark" aria-hidden="true">♠</span>
-        <span class="brand-text">17 Games</span>
+        <span class="brand-mark" aria-hidden="true">17</span>
+        <span class="brand-text">Games</span>
       </a>
-      <p class="brand-note">Arcade lounge</p>
     </header>
 
-    <main class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">17 Spades presents</p>
-        <h1>17 Games</h1>
-        <p class="lede">
-          Two quick hits from the lounge. Tap in, chase a high score, and get out before the next hand.
-        </p>
-        <div class="cta-row">
-          <a class="cta primary" href="/games/flappy-bee/">Play Flappy Bee</a>
-          <a class="cta secondary" href="/games/coca-cola/">Play Coca-Cola</a>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-plane" aria-hidden="true">
+          <div class="plane-wash bee-wash"></div>
+          <div class="plane-wash cola-wash"></div>
+          <div class="plane-motif bee-motif"></div>
+          <div class="plane-motif cola-motif"></div>
         </div>
-      </div>
 
-      <div class="hero-visual" aria-hidden="true">
-        <div class="orbit">
-          <div class="orb bee-orb">
-            <span class="glyph bee-glyph" aria-hidden="true"></span>
-            <strong>Flappy Bee</strong>
-          </div>
-          <div class="orb cola-orb">
-            <span class="glyph cola-glyph" aria-hidden="true"></span>
-            <strong>Coca-Cola</strong>
+        <div class="hero-copy">
+          <h1 id="hero-title">17 Games</h1>
+          <p class="lede">
+            Two short browser games from our GPP class project — tap in, chase a score, and play again.
+          </p>
+          <div class="cta-row">
+            <a class="cta primary" href="/games/flappy-bee/">Play Flappy Bee</a>
+            <a class="cta secondary" href="/games/coca-cola/">Play Refresh Rush</a>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section class="game-rail" aria-label="Playable games">
+        <a class="portal bee" href="/games/flappy-bee/">
+          <div class="portal-media bee-media" aria-hidden="true"></div>
+          <div class="portal-copy">
+            <h2>Flappy Bee</h2>
+            <p>A tribute flyer for the Ginza Honey Bee Project. Pass pipes, grab honey, and keep flying.</p>
+            <span class="play-link">Play Flappy Bee</span>
+          </div>
+        </a>
+
+        <a class="portal cola" href="/games/coca-cola/">
+          <div class="portal-media cola-media" aria-hidden="true"></div>
+          <div class="portal-copy">
+            <h2>Coca-Cola Refresh Rush</h2>
+            <p>Swipe trash, bank empty bottles, and dodge bombs in a fizzy sixty-second rush.</p>
+            <span class="play-link">Play Refresh Rush</span>
+          </div>
+        </a>
+      </section>
     </main>
 
-    <section class="game-rail" aria-label="Playable games">
-      <a class="portal bee" href="/games/flappy-bee/">
-        <div class="portal-media bee-media"></div>
-        <div class="portal-copy">
-          <h2>Flappy Bee</h2>
-          <p>Tribute flyer for the Ginza Honey Bee Project. Pass pipes, grab honey and flowers.</p>
-          <span class="play-chip">Play now</span>
-        </div>
-      </a>
-
-      <a class="portal cola" href="/games/coca-cola/">
-        <div class="portal-media cola-media"></div>
-        <div class="portal-copy">
-          <h2>Coca-Cola</h2>
-          <p>Recycle Rush — swipe trash, bank empty bottles, dodge bombs in a 60-second fizz.</p>
-          <span class="play-chip">Play now</span>
-        </div>
-      </a>
-    </section>
-
     <footer class="foot">
-      <p>Built for Cloudflare Pages · Drop replacement builds into <code>/games/&lt;name&gt;/</code></p>
+      <p>
+        Made for GPP Class project by:
+        Chris England, Kippe Anabuki, Merlijn van der Hout, Hayato Hashiyama, and Tomoshiro Tsukada
+      </p>
     </footer>
   </div>
 `
