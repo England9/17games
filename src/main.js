@@ -56,7 +56,7 @@ app.innerHTML = `
         <div class="portal-media cola-media"></div>
         <div class="portal-copy">
           <h2>Coca-Cola</h2>
-          <p>Float the classic can through ice and bottle stacks. Stay fizzy. Stay airborne.</p>
+          <p>Recycle Rush — swipe trash, bank empty bottles, dodge bombs in a 60-second fizz.</p>
           <span class="play-chip">Play now</span>
         </div>
       </a>

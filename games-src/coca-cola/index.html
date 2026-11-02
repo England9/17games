@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Coca-Cola Recycle Rush</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet" />
+  <style>
+      .games-back{position:fixed;top:12px;left:12px;z-index:50;color:#fff;background:rgba(200,16,46,.92);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:.35rem .75rem;font:600 .85rem Fredoka,system-ui,sans-serif;text-decoration:none;backdrop-filter:blur(4px)}
+      .games-back:hover{background:#e11d48}
+    </style>
+  </head>
+  <body>
+    <a class="games-back" href="/">← 17 Games</a>
+    <div id="app">
+      <canvas id="game" width="960" height="640" aria-label="Coca-Cola Recycle Rush game canvas"></canvas>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

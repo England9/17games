@@ -7,6 +7,7 @@
     "dev": "vite --host 127.0.0.1 --port 43127",
     "build": "vite build",
     "build:flappy-bee": "npm --prefix games-src/flappy-bee install && npm --prefix games-src/flappy-bee run build && rm -rf public/games/flappy-bee && mkdir -p public/games/flappy-bee && cp -a games-src/flappy-bee/dist/. public/games/flappy-bee/",
+    "build:coca-cola": "npm --prefix games-src/coca-cola install && npm --prefix games-src/coca-cola run build && rm -rf public/games/coca-cola && mkdir -p public/games/coca-cola && cp -a games-src/coca-cola/dist/. public/games/coca-cola/",
     "preview": "vite preview --host 127.0.0.1 --port 43127",
     "pages:dev": "npm run build && wrangler pages dev dist --ip 127.0.0.1 --port 43127"
   },
