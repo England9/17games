@@ -1,4 +1,4 @@
-# Coca-Cola Recycle Rush
+# Coca-Cola Refresh Rush
 
 A kawaii, Coca-Cola–themed Fruit Ninja–style browser game. Swipe or shoot flying trash, recycle empty Coke bottles, grab power-ups, and avoid bombs in a 60-second rush.
 

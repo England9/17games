@@ -3,7 +3,7 @@
 Cloudflare Pages arcade lobby for 17 Spades with:
 
 - [`/games/flappy-bee`](./public/games/flappy-bee/) — Flappy Bee (Ginza Honey Bee Project tribute)
-- [`/games/coca-cola`](./public/games/coca-cola/) — Coca-Cola Recycle Rush
+- [`/games/coca-cola`](./public/games/coca-cola/) — Coca-Cola Refresh Rush
 
 ## Important: GitHub wiring
 

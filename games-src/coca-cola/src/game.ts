@@ -636,7 +636,7 @@ export class RecycleRushGame {
     ctx.font = '700 54px Fredoka, sans-serif'
     ctx.textAlign = 'center'
     ctx.textBaseline = 'middle'
-    ctx.fillText('Recycle Rush', W / 2, 190)
+    ctx.fillText('Refresh Rush', W / 2, 190)
 
     ctx.font = '400 18px Fredoka, sans-serif'
     ctx.fillStyle = 'rgba(255,248,248,0.9)'
