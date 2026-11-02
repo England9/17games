@@ -1,0 +1,16 @@
+{
+  "name": "17games",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 43127",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 43127",
+    "pages:dev": "npm run build && wrangler pages dev dist --ip 127.0.0.1 --port 43127"
+  },
+  "devDependencies": {
+    "vite": "^8.3.5",
+    "wrangler": "^4.45.3"
+  }
+}
